@@ -22,22 +22,25 @@ const MainNav: React.FC<MainNavProps> = ({
   }));
 
   return (
-    <nav
-      className="mx-6 flex items-center space-x-4 lg:space-x-6"
-    >
-      {routes.map((route) => (
-        <Link
-          key={route.href}
-          href={route.href}
-          className={cn(
-            'text-sm font-medium transition-colors hover:text-black',
-            route.active ? 'text-black' : 'text-neutral-500'
-          )}
-        >
-          {route.label}
-      </Link>
-      ))}
-    </nav>
+    <details className="dropdown">
+      <summary className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8">Pet Shop</summary>
+      
+        <ul>
+          {routes.map((route) => (
+            <li key={route.href}>
+              <Link
+                href={route.href}
+                className={
+                  'text-sm font-medium transition-colors hover:text-black'
+                }
+              >
+                {route.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </details>
+
   )
 };
 

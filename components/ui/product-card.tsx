@@ -42,10 +42,9 @@ const ProductCard: React.FC<ProductCard> = ({
     <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4">
       {/* Image & actions */}
       <div className="aspect-square rounded-xl bg-gray-100 relative">
-        <Image 
+        <img 
           src={data.images?.[0]?.url} 
           alt="" 
-          fill
           className="aspect-square object-cover rounded-md"
         />
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">

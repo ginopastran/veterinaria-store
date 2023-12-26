@@ -15,7 +15,7 @@ interface MobileFiltersProps {
   // colors: Color[],
 }
 
-const MobileFilters: React.FC<MobileFiltersProps> = (
+const MobileFilters = (
   {
     // sizes,
     // colors
