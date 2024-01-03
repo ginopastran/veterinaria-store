@@ -12,25 +12,25 @@ const Footer = () => {
         </Link>
         <div className="flex flex-col items-center space-x-4">
           <div className=" flex gap-7">
-            <Link href="/SobreLuffi"className="text-sm text-white dark:text-gray-300 hover:text-cyan-600">
+           {/*  <Link href="/SobreLuffi"className="text-sm text-white dark:text-gray-300 hover:text-cyan-600">
               Sobre Luffi
             </Link>
             <Link href="/CuidadoySalud"className="text-sm text-white dark:text-gray-300 hover:text-cyan-600">
               Cuidado y Salud
-            </Link>
-            <Link href="/PetShop" className="text-sm text-white dark:text-gray-300 hover:text-cyan-600">Pet Shop</Link>
+            </Link> */}
+            <Link href="/PetShop" className="text-sm text-white dark:text-gray-300 hover:text-cyan-600">Productos</Link>
           </div>
           <div>
             <p className="text-sm text-white dark:text-gray-300">
-            &copy; 2023 Store, Inc. All rights reserved.            </p>
+            &copy; 2023 AndexTech, Inc. All rights reserved.            </p>
           </div>
         </div>
 
         <div className="flex justify-center mx-2">
           <Link
-            href="www.facebook.com"
+            href="https://www.instagram.com/veterinarialuffi/"
             className="mx-2 text-white transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-            aria-label="Facebook"
+            aria-label="Instagram"
           >
             <svg
               className="w-5 h-5 fill-current"
@@ -42,9 +42,9 @@ const Footer = () => {
             </svg>
             </Link>
             <Link
-            href="/"
+            href="https://www.facebook.com/veterinarialuffi/"
             className="mx-2 text-white transition-colors duration-300 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-blue-400"
-            aria-label="Instagram"
+            aria-label="Facebook"
           >
             <svg
               className="w-5 h-5 fill-current"
