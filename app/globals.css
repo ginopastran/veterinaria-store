@@ -7,3 +7,8 @@ body,
 :root {
   height: 100%;
 }
+.triangle-left {
+  border-top: 50px solid transparent;
+  border-right: 100px solid rgb(255 255 255 / 0.9);
+  border-bottom: 50px solid transparent;
+}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 const Footer = () => {
   return (
-    <footer className="bg-teal-400 dark:bg-gray-900">
+    <footer className="bg-cyan-700 dark:bg-gray-900">
       <div className="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
         <Link href="/">
           <img
@@ -12,16 +12,16 @@ const Footer = () => {
         </Link>
         <div className="flex flex-col items-center space-x-4">
           <div className=" flex gap-7">
-            <Link href="/SobreLuffi"className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600">
+            <Link href="/SobreLuffi"className="text-sm text-white dark:text-gray-300 hover:text-cyan-600">
               Sobre Luffi
             </Link>
-            <Link href="/CuidadoySalud"className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600">
+            <Link href="/CuidadoySalud"className="text-sm text-white dark:text-gray-300 hover:text-cyan-600">
               Cuidado y Salud
             </Link>
-            <Link href="/PetShop" className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600">Pet Shop</Link>
+            <Link href="/PetShop" className="text-sm text-white dark:text-gray-300 hover:text-cyan-600">Pet Shop</Link>
           </div>
           <div>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-sm text-white dark:text-gray-300">
             &copy; 2023 Store, Inc. All rights reserved.            </p>
           </div>
         </div>
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="flex justify-center mx-2">
           <Link
             href="www.facebook.com"
-            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+            className="mx-2 text-white transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
             aria-label="Facebook"
           >
             <svg
@@ -43,7 +43,7 @@ const Footer = () => {
             </Link>
             <Link
             href="/"
-            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-blue-400"
+            className="mx-2 text-white transition-colors duration-300 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-blue-400"
             aria-label="Instagram"
           >
             <svg

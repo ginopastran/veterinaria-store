@@ -2,31 +2,26 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavbarActions from "./navbar-actions";
-const NavbarTopBarPreview = async () => {
-
-  const [isToggleOpen, setIsToggleOpen] = useState(false);
+export default function NavbarTopBarPreview() {
+  const [isToggleOpen, setIsToggleOpen] = useState(false)
 
   return (
     <>
       {/*<!-- Component: Navbar with Topbar --> */}
+  
 
       {/*<!-- Header --> */}
-      <header className="border-b-1 relative z-20 w-full border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
-        <div className="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+      <header className="border-b-1  relative z-20 w-full border-b border-slate-200 bg-white/90 shadow-lg shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
+        <div className="relative  mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
           <nav
             aria-label="main navigation"
-            className="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700"
+            className="flex h-[5.5rem] items-center  justify-between   text-slate-700"
             role="navigation"
           >
             {/*      <!-- Brand logo --> */}
-            <Link
-              className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
-              href="/"
-            >
-              <img
-                src="/image/luffilogo-horizontal.png"
-                className="flex mb-4 md:mb-0 w-52 h-12"
-              />
+            <Link href="/">
+          
+            <img src="/image/luffilogo-horizontal.png" className="flex h-12 w-28 md:w-36"/>
             </Link>
             {/*      <!-- Mobile trigger --> */}
             <button
@@ -67,36 +62,28 @@ const NavbarTopBarPreview = async () => {
               }`}
             >
               <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-haspopup="false"
+                <Link
                   className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="/"
+                  href="/somosLuffi"
                 >
-                  <span>Sobre Luffi</span>
-                </a>
+                  Somos Luffi
+                </Link>
               </li>
-              <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-current="page"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
+          {/*      <li role="none" className="flex items-stretch">
+                <Link
+                  className="flex items-center gap-2 py-4 text-emerald-500 transition-colors duration-300 hover:text-emerald-600 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
                   href="/"
                 >
-                  <span>Cuidado y Salud</span>
-                </a>
-              </li>
+                  Account
+                </Link>
+              </li> */}
               <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-current="page"
-                  aria-haspopup="false"
+                <Link
                   className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="/"
+                  href="/Productos"
                 >
-                  <span>Cuidado y Salud</span>
-                </a>
+                  Productos
+                </Link>
               </li>
             </ul>
             {/*      <!-- Actions --> */}
@@ -108,6 +95,5 @@ const NavbarTopBarPreview = async () => {
       </header>
       {/*<!-- End Navbar with Topbar--> */}
     </>
-  );
+  )
 }
-export default NavbarTopBarPreview;

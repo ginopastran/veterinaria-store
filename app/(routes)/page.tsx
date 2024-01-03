@@ -4,7 +4,8 @@ import ProductList from "@/components/product-list";
 import Billboard from "@/components/ui/billboard";
 import Container from "@/components/ui/container";
 import CardHome from "@/components/card-home";
-
+import Carrusel from "@/components/ui/carrusel";
+import UbicacionHome from "@/components/ubicacion";
 export const revalidate = 0;
 
 const HomePage = async () => {
@@ -13,12 +14,17 @@ const HomePage = async () => {
 
   return (
     <Container>
-      <div className="space-y-10 pb-10">
-         <Billboard /> 
-        <div className="flex flex-col gap-y-8 px-4  sm:px-6 lg:px-8 max-w-7xl m-auto ">
+      < div className="  ">
+        <Billboard /> 
+
+        <div className="flex flex-col gap-y-8 px-4  sm:px-6 lg:px-8 w-auto m-auto ">
+          <Carrusel/>
           <ProductList title="Productos Recomendados" items={products} />
         </div>
+        
         <CardHome />
+        <UbicacionHome/>
+        
       </div>
     </Container>
   );
