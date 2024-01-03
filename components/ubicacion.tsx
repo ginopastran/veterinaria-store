@@ -28,7 +28,7 @@ const UbicacionHome = () => {
       </div>
       <div className="  m-4 2xl:absolute 2xl:bottom-11 2xl:right-72 2xl:w-[500px] ">
         <div
-          className="absolute w-0 h-0 overflow-hidden triangle-left 2xl:top-24 -left-14 z-20 "
+          className="absolute hidden w-0 h-0 overflow-hidden triangle-left 2xl:top-24 -left-14 z-20 "
           id=""
         ></div>
         <div className="flex flex-col gap-3    2xl:justify-around  bg-white border  2xl:h-96  rounded-xl  backdrop-blur-xl py-8">

@@ -14,17 +14,18 @@ const HomePage = async () => {
 
   return (
     <Container>
-      < div className="  ">
+      <div className="  ">
         <Billboard /> 
 
         <div className="flex flex-col gap-y-8 px-4  sm:px-6 lg:px-8 w-auto m-auto ">
           <Carrusel/>
           <ProductList title="Productos Recomendados" items={products} />
         </div>
-        
+        <div className="relative h-full 2xl:w-full">
+        <img src="image/ccc2.png" alt="" className="absolute h-full w-full object-cover" />
         <CardHome />
         <UbicacionHome/>
-        
+        </div>
       </div>
     </Container>
   );
