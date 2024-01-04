@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Brevia';
+    src: local('Brevia Bold Italic'), local('Brevia-Bold-Italic'),
+        url('Brevia-BoldItalic.woff2') format('woff2'),
+        url('Brevia-BoldItalic.woff') format('woff'),
+        url('Brevia-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+  }

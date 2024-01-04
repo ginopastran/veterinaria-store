@@ -160,7 +160,7 @@ export const filters = [
       { value: 'purple', label: 'Purple' },
     ],
   },
-  {
+/*   {
     id: 'sizes',
     name: 'Sizes',
     options: [
@@ -171,5 +171,5 @@ export const filters = [
       { value: 'xl', label: 'XL' },
       { value: '2xl', label: '2XL' },
     ],
-  },
+  }, */
 ]

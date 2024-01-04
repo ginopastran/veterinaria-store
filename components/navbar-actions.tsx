@@ -21,19 +21,22 @@ const NavbarActions = () => {
     return null;
   }
 
-  return ( 
-    <div className="ml-auto flex items-center gap-x-4">
-      <Button onClick={() => router.push('/cart')} className="flex items-center rounded-full bg-black px-4 py-2">
-        <ShoppingBag
-          size={20}
-          color="white"
-        />
-        <span className="ml-2 text-sm font-medium text-white">
+  return (
+    <div className="flex items-center">
+      <Button
+        onClick={() => router.push("/cart")}
+        className="flex items-center bg-transparent px-0 py-2 gap-x-3"
+      >
+        <h2 className="text-2xl text-cyan-700 hover:text-cyan-600 font-bold lg:hidden flex">
+          Carrito
+        </h2>
+        <ShoppingBag size={25} color="#1d7681" />
+        <span className="text-lg font-semibold text-cyan-700">
           {cart.items.length}
         </span>
       </Button>
     </div>
   );
-}
- 
+};
+
 export default NavbarActions;
