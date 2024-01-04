@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import MainNav from "@/components/main-nav";
+import MainNav from "@/components/archivo-sin-uso-nav-main-delete";
 import Container from "@/components/ui/container";
 import NavbarActions from "@/components/navbar-actions";
 import getCategories from "@/actions/get-categories";
