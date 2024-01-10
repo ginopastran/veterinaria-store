@@ -11,10 +11,10 @@ export interface Product {
   isFeatured: boolean;
   // size: Size;
   // color: Color;
-  images: Image[]
+  images: PImage[]
 };
 
-export interface Image {
+export interface PImage {
   id: string;
   url: string;
 }

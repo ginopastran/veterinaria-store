@@ -5,6 +5,7 @@ import IconButton from "@/components/ui/icon-button";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
+import Image from "next/image";
 
 interface CartItemProps {
   data: Product;
@@ -19,7 +20,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
 
   return (
     <li className="flex py-6 border-b">
-      <img
+      <Image
         src={data.images[0].url}
         alt=""
         className="object-cover m-auto rounded-md"

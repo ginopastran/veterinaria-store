@@ -10,6 +10,7 @@ import { useClickAway } from "react-use";
 import { useRef } from "react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
   return (
     <div className="absolute w-full bg-transparent z-10 flex items-center justify-between lg:pt-7 lg:px-10 p-4 pt-10 px-9">
       <Link href="/" className="z-[60]">
-        <img
+        <Image
           src="/image/luffilogo-horizontal.svg"
           alt="Luffi Logo"
           className="w-56 lg:w-80 "
@@ -73,7 +74,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <div className="flex">
-              <img
+              <Image
                 src="image/products-background-mobile.png"
                 alt="background image"
                 className="absolute inset-0 min-h-screen w-full overflow-hidden top-0 z-50"
@@ -168,13 +169,17 @@ const Navbar = () => {
                   }}
                 >
                   <Link href="https://www.facebook.com/veterinarialuffi/">
-                    <img src="/image/facebook-black.svg" alt="" className="" />
+                    <Image
+                      src="/image/facebook-black.svg"
+                      alt=""
+                      className=""
+                    />
                   </Link>
                   <Link href="https://www.instagram.com/veterinarialuffi/?hl=es-la">
-                    <img src="/image/instagram-black.svg" alt="" />
+                    <Image src="/image/instagram-black.svg" alt="" />
                   </Link>
                   <Link href="https://api.whatsapp.com/send/?phone=2604599286&text&type=phone_number&app_absent=0">
-                    <img src="/image/whatsapp-black.svg" alt="" />
+                    <Image src="/image/whatsapp-black.svg" alt="" />
                   </Link>
                 </motion.div>
                 <motion.div

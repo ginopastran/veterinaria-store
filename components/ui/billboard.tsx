@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Billboard } from "@/types";
+import Image from "next/image";
 
 interface BillboardProps {
   data: Billboard;
@@ -10,7 +11,7 @@ const Billboard = () => {
   return (
     <header className="relative text-gray-400 body-font w-full">
       <div className="relative w-full h-screen">
-        <img
+        <Image
           src="image/hero-img.png"
           alt="background image"
           className="absolute inset-0 h-screen w-screen overflow-hidden"
@@ -45,7 +46,7 @@ const Billboard = () => {
               </Link> */}
               </div>
               <div className="absolute bottom-0 sm:hidden flex">
-                <img
+                <Image
                   className="w-full z-20"
                   alt="hero"
                   src="image/veteluffi_animales.png"
@@ -53,23 +54,23 @@ const Billboard = () => {
               </div>
               <div className="absolute bottom-0 pb-8 gap-8 pt-16 pl-2 hidden md:flex">
                 <Link href="https://www.facebook.com/veterinarialuffi/">
-                  <img src="/image/facebook.svg" alt="" />
+                  <Image src="/image/facebook.svg" alt="" />
                 </Link>
                 <Link href="https://www.instagram.com/veterinarialuffi/?hl=es-la">
-                  <img src="/image/instagram.svg" alt="" />
+                  <Image src="/image/instagram.svg" alt="" />
                 </Link>
                 <Link href="https://api.whatsapp.com/send/?phone=2604599286&text&type=phone_number&app_absent=0">
-                  <img src="/image/whatsapp.svg" alt="" />
+                  <Image src="/image/whatsapp.svg" alt="" />
                 </Link>
               </div>
             </div>
 
-            <img
+            <Image
               className="object-cover object-center rounded absolute bottom-0 z-20 max-w-[40%] right-0 hidden md:block"
               alt="hero"
               src="image/veteluffi_animales.png"
             />
-            {/* <img
+            {/* <Image
               src="image/intersect.svg"
               alt=""
               className="object-cover object-center rounded absolute bottom-0 z-0"

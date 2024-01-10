@@ -9,6 +9,7 @@ import Button from "@/components/ui/button";
 import { Category, Subcategory } from "@/types";
 
 import Filter from "./filter";
+import Image from "next/image";
 
 interface MobileFiltersProps {
   nameCategorias: string;
@@ -72,7 +73,7 @@ const MobileFilters = ({
           <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl">
             {/* Close button */}
             <div className="flex items-center justify-between px-4">
-              <img src="/image/luffilogo-horizontal.png" alt="" width={200} />
+              <Image src="/image/luffilogo-horizontal.png" alt="" width={200} />
               <IconButton
                 icon={<X size={15} />}
                 className=" text-cyan-800"

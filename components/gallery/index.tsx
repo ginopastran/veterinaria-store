@@ -3,12 +3,13 @@
 import NextImage from "next/image";
 import { Tab } from "@headlessui/react";
 
-import { Image } from "@/types";
+import { PImage } from "@/types";
 
 import GalleryTab from "./gallery-tab";
+import Image from "next/image";
 
 interface GalleryProps {
-  images: Image[];
+  images: PImage[];
 }
 
 const Gallery: React.FC<GalleryProps> = ({ images = [] }) => {
@@ -25,7 +26,7 @@ const Gallery: React.FC<GalleryProps> = ({ images = [] }) => {
         {images.map((image) => (
           <Tab.Panel key={image.id}>
             <div className="relative h-full w-full sm:rounded-lg overflow-hidden">
-              <img
+              <Image
                 src={image.url}
                 alt="Image"
                 className="object-cover m-auto rounded-md"
