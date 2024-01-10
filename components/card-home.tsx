@@ -16,8 +16,8 @@ const CardHome = () => {
 
           <div className="flex-col text-white">
             <p className=" text-center absolute  2xl:text-7xl text-2xl 2xl:top-10 2xl:right xl:text-7xl xl:top-10 xl:right font-bold top-60 font-['Brevia']">
-              "Trata a los Animales como te Gustaría
-              <br /> ser Tratado”
+              &quot;Trata a los Animales como te Gustaría
+              <br /> ser Tratado&quot;
             </p>
 
             <p className=" md:block px-4 my-4  2xl:text-3xl xl:text-3xl text-xl text-left font-semibold">
