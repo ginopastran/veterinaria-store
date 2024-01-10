@@ -1,11 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('../fonts/style.css');
+
+
 
 * {
   z-index: 0;
 }
-
+h1 {
+  font-family: Brevia;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -82,4 +87,20 @@
   border-top: 50px solid transparent;
   border-right: 100px solid rgb(255 255 255 / 0.9);
   border-bottom: 50px solid transparent;
+}
+
+.carousel-button {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Más estilos... */
+}
+.carousel-button.left {
+  display: flex;
+  left: 20%;
+}
+.carousel-button.right {
+  display: flex;
+  right: 20%;
 }
