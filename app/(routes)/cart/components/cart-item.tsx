@@ -20,7 +20,7 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
 
   return (
     <li className="flex py-6 border-b">
-      <Image
+      <img
         src={data.images[0].url}
         alt=""
         className="object-cover m-auto rounded-md"

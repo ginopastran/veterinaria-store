@@ -52,42 +52,42 @@ export default function Carrusel() {
   return (
     <>
       <div ref={sliderRef} className="keen-slider h-20  overflow-hidden ">
-        <Image
+        <img
           className="keen-slider__slide   w-full h-full object-scale-down "
           src="image/empresa-1.png"
           alt="carrousel"
         />
-        <Image
+        <img
           className="keen-slider__slide   w-full h-full object-scale-down"
           src="image/empresa-2.png"
           alt="carrousel"
         />
-        <Image
+        <img
           className="keen-slider__slide   w-full h-full object-scale-down"
           src="image/empresa-3.png"
           alt="carrousel"
         />
-        <Image
+        <img
           className="keen-slider__slide   w-full h-full object-scale-down"
           src="image/empresa-4.png"
           alt="carrousel"
         />
-        <Image
+        <img
           className="keen-slider__slide   w-full h-full object-scale-down"
           src="image/empresa-5.png"
           alt="carrousel"
         />
-        <Image
+        <img
           className="keen-slider__slide   w-full h-full object-scale-down"
           src="image/empresa-1.png"
           alt="carrousel"
         />
-        <Image
+        <img
           className="keen-slider__slide   w-full h-full object-scale-down"
           src="image/empresa-2.png"
           alt="carrousel"
         />
-        <Image
+        <img
           className="keen-slider__slide   w-full h-full object-scale-down"
           src="image/empresa-3.png"
           alt="carrousel"

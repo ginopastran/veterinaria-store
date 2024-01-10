@@ -18,7 +18,7 @@ const HomePage = async () => {
       <Billboard />
       <div className="space-y-10 ">
         <div className="flex relative flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
-          <Image
+          <img
             src="image/ccc3.png"
             alt=""
             className="absolute inset-0  w-screen"
@@ -27,7 +27,7 @@ const HomePage = async () => {
           <ProductList title="Featured Products" items={products} />
         </div>
         <div className="relative h-full 2xl:w-full">
-          <Image
+          <img
             src="image/ccc2.png"
             alt=""
             className="absolute inset-0 h-full w-screen object-fill"

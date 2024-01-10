@@ -84,7 +84,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ onSubmit }) => {
         onSubmit={form.handleSubmit(handleSubmit)}
         className="max-w-md w-full flex flex-col gap-4"
       >
-        <Image
+        <img
           src="/image/luffilogo-horizontal.svg"
           alt="Luffi-Logo"
           className=" w-40 lg:w-52 pb-6 mx-auto"

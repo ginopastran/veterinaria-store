@@ -6,7 +6,7 @@ const ServicesHero = () => {
   return (
     <header className="relative text-gray-400 body-font w-full">
       <div className="relative w-full h-screen">
-        <Image
+        <img
           src="image/services-background.png"
           alt="background image"
           className="absolute inset-0 h-screen w-screen overflow-hidden"

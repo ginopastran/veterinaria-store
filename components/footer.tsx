@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-cyan-700 dark:bg-gray-900">
       <div className="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
         <Link href="/">
-          <Image
+          <img
             className="w-auto h-7"
             src="image/luffilogo-horizontal.png"
             alt="Luffi logo"

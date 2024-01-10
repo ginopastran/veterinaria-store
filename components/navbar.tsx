@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <div className="absolute w-full bg-transparent z-10 flex items-center justify-between lg:pt-7 lg:px-10 p-4 pt-10 px-9">
       <Link href="/" className="z-[60]">
-        <Image
+        <img
           src="/image/luffilogo-horizontal.svg"
           alt="Luffi Logo"
           className="w-56 lg:w-80 "
@@ -74,7 +74,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <div className="flex">
-              <Image
+              <img
                 src="image/products-background-mobile.png"
                 alt="background image"
                 className="absolute inset-0 min-h-screen w-full overflow-hidden top-0 z-50"
@@ -169,17 +169,13 @@ const Navbar = () => {
                   }}
                 >
                   <Link href="https://www.facebook.com/veterinarialuffi/">
-                    <Image
-                      src="/image/facebook-black.svg"
-                      alt=""
-                      className=""
-                    />
+                    <img src="/image/facebook-black.svg" alt="" className="" />
                   </Link>
                   <Link href="https://www.instagram.com/veterinarialuffi/?hl=es-la">
-                    <Image src="/image/instagram-black.svg" alt="" />
+                    <img src="/image/instagram-black.svg" alt="" />
                   </Link>
                   <Link href="https://api.whatsapp.com/send/?phone=2604599286&text&type=phone_number&app_absent=0">
-                    <Image src="/image/whatsapp-black.svg" alt="" />
+                    <img src="/image/whatsapp-black.svg" alt="" />
                   </Link>
                 </motion.div>
                 <motion.div

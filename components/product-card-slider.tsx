@@ -43,7 +43,7 @@ const ProductCardSlider: React.FC<ProductCardSlider> = ({ data }) => {
     >
       {/* Image & actions */}
       <div className="aspect-square rounded-xl bg-gray-100 relative number-slide">
-        <Image
+        <img
           src={data.images?.[0]?.url}
           alt=""
           className="aspect-square object-cover rounded-md"

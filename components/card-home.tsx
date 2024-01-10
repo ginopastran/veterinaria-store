@@ -5,7 +5,7 @@ import Image from "next/image";
 const CardHome = () => {
   return (
     <div className="relative grid place-items-center pt-64  ">
-      <Image
+      <img
         src="image/Somos-home.png"
         alt="pic"
         className="absolute 2xl:h-[76%] 2xl:w-[37%]  h-52 w-52 rounded-2xl  2xl:left-16 2xl:top-16 xl:left-16 xl:top-16 top-4 z-10"

@@ -8,12 +8,12 @@ const ProductsHero = () => {
   return (
     <main className="relative text-gray-400 body-font w-full h-screen">
       <div className="relative w-full h-screen">
-        <Image
+        <img
           src="image/products-background.png"
           alt="background image"
           className="absolute inset-0 h-screen w-screen overflow-hidden hidden sm:flex"
         />
-        <Image
+        <img
           src="image/products-background-mobile.png"
           alt="background image"
           className="absolute inset-0 h-screen w-screen overflow-hidden flex sm:hidden"
@@ -61,7 +61,7 @@ const ProductsHero = () => {
               </div>
             </div>
             <div className=" z-20">
-              <Image
+              <img
                 className="object-cover object-center rounded absolute bottom-0 z-20 max-w-[40%] right-0 hidden lg:block"
                 alt="hero"
                 src="image/veteluffi_animales.png"

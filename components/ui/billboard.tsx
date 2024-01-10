@@ -11,7 +11,7 @@ const Billboard = () => {
   return (
     <header className="relative text-gray-400 body-font w-full">
       <div className="relative w-full h-screen">
-        <Image
+        <img
           src="image/hero-img.png"
           alt="background image"
           className="absolute inset-0 h-screen w-screen overflow-hidden"
@@ -46,7 +46,7 @@ const Billboard = () => {
               </Link> */}
               </div>
               <div className="absolute bottom-0 sm:hidden flex">
-                <Image
+                <img
                   className="w-full z-20"
                   alt="hero"
                   src="image/veteluffi_animales.png"
@@ -54,18 +54,18 @@ const Billboard = () => {
               </div>
               <div className="absolute bottom-0 pb-8 gap-8 pt-16 pl-2 hidden md:flex">
                 <Link href="https://www.facebook.com/veterinarialuffi/">
-                  <Image src="/image/facebook.svg" alt="" />
+                  <img src="/image/facebook.svg" alt="" />
                 </Link>
                 <Link href="https://www.instagram.com/veterinarialuffi/?hl=es-la">
-                  <Image src="/image/instagram.svg" alt="" />
+                  <img src="/image/instagram.svg" alt="" />
                 </Link>
                 <Link href="https://api.whatsapp.com/send/?phone=2604599286&text&type=phone_number&app_absent=0">
-                  <Image src="/image/whatsapp.svg" alt="" />
+                  <img src="/image/whatsapp.svg" alt="" />
                 </Link>
               </div>
             </div>
 
-            <Image
+            <img
               className="object-cover object-center rounded absolute bottom-0 z-20 max-w-[40%] right-0 hidden md:block"
               alt="hero"
               src="image/veteluffi_animales.png"

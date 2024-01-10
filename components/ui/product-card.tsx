@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
     >
       {/* Image & actions */}
       <div className="rounded-xl relative">
-        <Image
+        <img
           src={data.images?.[0]?.url}
           alt=""
           className="object-cover m-auto rounded-md"

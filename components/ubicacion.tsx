@@ -12,7 +12,7 @@ const UbicacionHome = () => {
             rel="stylesheet"
             href="https://maps.app.goo.gl/37VvqgMMCYjGhDvD8"
           >
-            <Image
+            <img
               src="image/mapa.png"
               alt="mapa"
               className="object-bottom object-cover w-full h-full z-10  "
@@ -20,14 +20,14 @@ const UbicacionHome = () => {
           </Link>
         </div>
         <Link rel="stylesheet" href="https://maps.app.goo.gl/37VvqgMMCYjGhDvD8">
-          <Image
+          <img
             src="image/logo.png"
             alt="mapa"
             className="absolute  h-16   left-32 bottom-10 z-0 2xl:h-[18%] 2xl:left-[41%] 2xl:bottom-[24%]
           "
           />
         </Link>
-        <Image
+        <img
           src="image/gatoHome.png"
           alt="mapa"
           className="absolute hidden 2xl:block z-0 2xl:left-20 2xl:bottom-5
@@ -49,7 +49,7 @@ const UbicacionHome = () => {
                 rel="stylesheet"
                 href="https://maps.app.goo.gl/37VvqgMMCYjGhDvD8"
               >
-                <Image
+                <img
                   src="image/home-location.png"
                   alt=" whatsapp"
                   className="h-8 "
@@ -65,11 +65,7 @@ const UbicacionHome = () => {
             </div>
             <div className="flex gap-2 items-center ml-8 2xl:ml-16 hover:scale-110 hover:pl-4">
               <Link href="https://wa.me/+542604599286">
-                <Image
-                  src="image/whatsapp.png"
-                  alt=" whatsapp"
-                  className="h-8"
-                />
+                <img src="image/whatsapp.png" alt=" whatsapp" className="h-8" />
               </Link>
               <Link
                 href="https://wa.me/+542604599286"
