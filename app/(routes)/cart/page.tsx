@@ -26,7 +26,7 @@ const CartPage = () => {
     <Container>
       <div className=" bg-white pt-24 h-full">
         <div className="px-4 py-16 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-cyan-700 font-[Brevia] ">
+          <h1 className="text-4xl md:text-5xl font-bold text-cyan-700 font-Brevia ">
             Carrito
           </h1>
           <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
