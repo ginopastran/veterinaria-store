@@ -1,7 +1,7 @@
 "use client";
 
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 import Button from "@/components/ui/button";
@@ -9,11 +9,38 @@ import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { toast } from "react-hot-toast";
 import OrderCurrency from "@/components/ui/order-currency";
+import OrderForm from "./order-form";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+// Define la interfaz para los datos del formulario
+interface FormData {
+  email: string;
+  name: string;
+  phone: string;
+  delivery: "pickup" | "delivery";
+  address?: string;
+}
 
 const Summary = () => {
   const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  interface OrderFormData {
+    emailAddress: string;
+    name: string;
+    deliveryOption: "pickup" | "delivery";
+    address?: string;
+    phone: string;
+  }
 
   useEffect(() => {
     if (searchParams.get("success")) {
@@ -31,15 +58,19 @@ const Summary = () => {
     return total + Number(price);
   }, 0);
 
-  const onCheckout = async () => {
+  const handleFormSubmit = async (values: OrderFormData) => {
+    console.log(values);
+
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
       {
         productIds: items.map((item) => item.id),
+        orderFormData: values,
       }
     );
 
     window.location = response.data.url;
+    return Promise.resolve();
   };
 
   return (
@@ -47,7 +78,7 @@ const Summary = () => {
       <h2 className="text-lg font-bold text-gray-900">Resumen del pedido</h2>
       {items.map((item) => (
         <div className="flex justify-between items-center" key={item.id}>
-          <h3>{item.name}</h3>
+          <h3>{item.nameTag}</h3>
           <h3>
             <OrderCurrency
               value={item.offerPrice ? item.offerPrice : item.price}
@@ -63,13 +94,19 @@ const Summary = () => {
           <Currency value={totalPrice} />
         </div>
       </div>
-      <Button
-        onClick={onCheckout}
-        disabled={items.length === 0}
-        className="w-full mt-6  text-white"
-      >
-        Comprar
-      </Button>
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button
+            disabled={items.length === 0}
+            className="w-full mt-6  text-white"
+          >
+            Comprar
+          </Button>
+        </SheetTrigger>
+        <SheetContent>
+          <OrderForm onSubmit={handleFormSubmit} />
+        </SheetContent>
+      </Sheet>
     </div>
   );
 };

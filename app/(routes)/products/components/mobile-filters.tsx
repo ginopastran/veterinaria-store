@@ -15,6 +15,8 @@ interface MobileFiltersProps {
   nameSubcategorias: string;
   categories: Category[];
   subcategories: Subcategory[];
+  selectedSubcategory: string | null;
+  setSelectedSubcategory: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 const MobileFilters = ({
@@ -32,6 +34,13 @@ const MobileFilters = ({
   );
 
   useEffect(() => {
+    const storedSubcategory = localStorage.getItem("selectedSubcategory");
+    if (storedSubcategory) {
+      setSelectedSubcategory(storedSubcategory);
+    }
+  }, []);
+
+  useEffect(() => {
     if (categories.length === 1) {
       setSelectedCategory(categories[0].id);
     }
@@ -39,14 +48,13 @@ const MobileFilters = ({
 
   const onOpen = () => setOpen(true);
   const onClose = () => setOpen(false);
-
   return (
     <>
       <Button
         onClick={onOpen}
         className="flex items-center gap-x-2 mx-6 md:hidden bg-cyan-700"
       >
-        Filters
+        Filtros
         <Plus size={20} />
       </Button>
 
@@ -74,17 +82,16 @@ const MobileFilters = ({
 
             <div className="p-4 pt-10 gap-6 flex flex-col">
               <Filter
-                valueKey="categoryId"
                 name="Categorías"
+                valueKey="categoryId"
                 data={categories}
                 selectedValue={selectedCategory}
                 setSelectedValue={setSelectedCategory}
                 disabled={categories.length === 1}
               />
-
               <Filter
-                valueKey="subcategoryId"
                 name="Subcategorías"
+                valueKey="subcategoryId"
                 data={subcategories}
                 selectedValue={selectedSubcategory}
                 setSelectedValue={setSelectedSubcategory}

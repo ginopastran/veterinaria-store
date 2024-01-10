@@ -35,6 +35,10 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(
     null
   );
+  const [selectedMobileSubcategory, setSelectedMobileSubcategory] = useState<
+    string | null
+  >(null);
+
   const productsPerPage = 8;
   const mobileProductsPerPage = 6;
 
@@ -54,7 +58,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
     if (storedSubcategory) {
       setSelectedSubcategory(storedSubcategory);
     }
-  }, []);
+  }, [searchParams]);
 
   useEffect(() => {
     localStorage.setItem("selectedCategory", selectedCategory || "");
@@ -147,6 +151,8 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
               nameSubcategorias="Subcategorías"
               categories={categories}
               subcategories={subcategories}
+              selectedSubcategory={selectedMobileSubcategory}
+              setSelectedSubcategory={setSelectedMobileSubcategory}
             />
             <form
               onSubmit={(event) => {

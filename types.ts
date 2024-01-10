@@ -5,6 +5,7 @@ export interface Product {
   storeId: string;
   name: string;
   nameTag: string;
+  description: string;
   price: string;
   offerPrice: string;
   isFeatured: boolean;

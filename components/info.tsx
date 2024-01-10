@@ -30,12 +30,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       </div>
       <hr className="my-4" />
       <div className="flex flex-col gap-y-6">
-        <p className=" font-medium text-gray-700">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-          tenetur, ipsum quia quam doloremque nam deleniti! Voluptatum,
-          molestias obcaecati beatae nisi nobis quisquam ducimus voluptatem
-          repellendus ad cumque, officia amet.
-        </p>
+        <p className=" font-medium text-gray-700">{data?.description}</p>
       </div>
       <div className="mt-10 flex items-center gap-x-3">
         <Button
