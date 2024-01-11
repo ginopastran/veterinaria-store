@@ -58,8 +58,7 @@ const Filter: React.FC<FilterProps> = ({
       { skipNull: true }
     );
 
-    // Utiliza el método push en lugar de replace para mantener el historial
-    router.push(url);
+    router.replace(url);
   };
 
   return (

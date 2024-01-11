@@ -12,9 +12,12 @@ import NoResults from "@/components/ui/no-results";
 import ProductCard from "@/components/ui/product-card";
 import MobileFilters from "./components/mobile-filters";
 import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { Plus, Search } from "lucide-react";
 import { ClipLoader } from "react-spinners";
 import useProductsData from "@/hooks/use-product-data";
+import MobileCart from "@/components/mobile-cart";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Button from "@/components/ui/button";
 
 interface ProductsPageProps {
   searchParams: {
@@ -35,6 +38,10 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(
     null
   );
+  const [selectedMobileSubcategory, setSelectedMobileSubcategory] = useState<
+    string | null
+  >(null);
+
   const productsPerPage = 8;
   const mobileProductsPerPage = 6;
 
@@ -54,7 +61,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
     if (storedSubcategory) {
       setSelectedSubcategory(storedSubcategory);
     }
-  }, []);
+  }, [searchParams]);
 
   useEffect(() => {
     localStorage.setItem("selectedCategory", selectedCategory || "");
@@ -99,6 +106,9 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
 
   return (
     <Container>
+      <div className="fixed bottom-0 right-0 z-[50] block sm:hidden p-4">
+        <MobileCart />
+      </div>
       <div className="space-y-10 pb-10">
         <ProductsHero />
         <div className="hidden md:flex mx-6 gap-16 items-end" id="products">
@@ -142,6 +152,49 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
         </div>
         <div className="flex md:flex-row flex-col items-center justify-center">
           <div className="flex items-center md:hidden" id="productsmobile">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button className="flex items-center gap-x-2 mx-6 md:hidden bg-cyan-700">
+                  Filtros
+                  <Plus size={20} />
+                </Button>
+              </SheetTrigger>
+              <SheetContent>
+                <div className="flex flex-col gap-6">
+                  <img
+                    src="/image/luffilogo-horizontal.png"
+                    alt=""
+                    width={200}
+                  />
+                  <div className="flex flex-col gap-3">
+                    <Filter
+                      name="Categorías"
+                      valueKey="categoryId"
+                      data={categories}
+                      selectedValue={selectedCategory}
+                      setSelectedValue={setSelectedCategory}
+                      disabled={categories.length === 1}
+                    />
+                    <Filter
+                      name="Subcategorías"
+                      valueKey="subcategoryId"
+                      data={subcategories}
+                      selectedValue={selectedSubcategory}
+                      setSelectedValue={setSelectedSubcategory}
+                      disabled={subcategories.length === 1}
+                    />
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+            {/* <MobileFilters
+              nameCategorias="Categorías"
+              nameSubcategorias="Subcategorías"
+              categories={categories}
+              subcategories={subcategories}
+              selectedSubcategory={selectedMobileSubcategory}
+              setSelectedSubcategory={setSelectedMobileSubcategory}
+            /> */}
             <form
               onSubmit={(event) => {
                 event.preventDefault();
