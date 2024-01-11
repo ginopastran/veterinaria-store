@@ -10,6 +10,7 @@ type SearchParams = {
 };
 
 const useProductsData = (storeId: string, searchParams: SearchParams) => {
+    const { categoryId, subcategoryId } = searchParams;
     const [products, setProducts] = useState<Product[]>([]);
     const [categories, setCategories] = useState<Category[]>([]);
     const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
@@ -21,8 +22,8 @@ const useProductsData = (storeId: string, searchParams: SearchParams) => {
             try {
                 const productsData = await getProducts({
                     storeId,
-                    categoryId: searchParams.categoryId,
-                    subcategoryId: searchParams.subcategoryId,
+                    categoryId,
+                    subcategoryId,
                 });
                 setProducts(productsData);
                 const categoriesData = await getCategories({ storeId });
@@ -44,7 +45,7 @@ const useProductsData = (storeId: string, searchParams: SearchParams) => {
         };
 
         fetchData();
-    }, [storeId, searchParams]);
+    }, [storeId, categoryId, subcategoryId]); // Use categoryId and subcategoryId as dependencies
 
     return { products, categories, subcategories, isLoading };
 };
