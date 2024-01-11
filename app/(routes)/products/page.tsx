@@ -14,6 +14,7 @@ import MobileFilters from "./components/mobile-filters";
 import { Input } from "@/components/ui/input";
 import { Plus, Search } from "lucide-react";
 import { ClipLoader } from "react-spinners";
+import useProductsData from "@/hooks/use-product-data";
 import MobileCart from "@/components/mobile-cart";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Button from "@/components/ui/button";
@@ -44,45 +45,10 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
   const productsPerPage = 8;
   const mobileProductsPerPage = 6;
 
-  const [products, setProducts] = useState<Product[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [subcategories, setSubcategories] = useState<Subcategory[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        const scrollPosition = window.scrollY;
-
-        const productsData = await getProducts({
-          storeId,
-          categoryId: searchParams.categoryId,
-          subcategoryId: searchParams.subcategoryId,
-        });
-        setProducts(productsData);
-        window.scrollTo(0, scrollPosition);
-
-        const categoriesData = await getCategories({ storeId });
-        setCategories(categoriesData);
-
-        const getSubCategoriesFlat = async (storeId: string) => {
-          const subcategoriesObject = await getSubCategories({ storeId });
-          const subcategoriesArray = Object.values(subcategoriesObject).flat();
-          return subcategoriesArray;
-        };
-
-        const subcategoriesData = await getSubCategoriesFlat(storeId);
-        setSubcategories(subcategoriesData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [storeId, searchParams]);
+  const { products, categories, subcategories, isLoading } = useProductsData(
+    storeId,
+    searchParams
+  );
 
   useEffect(() => {
     const storedCategory = localStorage.getItem("selectedCategory");

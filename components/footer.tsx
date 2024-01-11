@@ -20,7 +20,7 @@ const Footer = () => {
               Cuidado y Salud
             </Link> */}
             <Link
-              href="/PetShop"
+              href="/products"
               className="text-sm text-white dark:text-gray-300 hover:text-cyan-600"
             >
               Productos
