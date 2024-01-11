@@ -21,15 +21,16 @@ const Filter: React.FC<FilterProps> = ({
   data,
   name,
   valueKey,
+  selectedValue,
   setSelectedValue,
   disabled,
 }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const selectedValue = searchParams.get(valueKey);
-
   const onClick = (id: string) => {
+    setSelectedValue(id === selectedValue ? null : id);
+
     const current = qs.parse(searchParams.toString());
 
     const query = {
@@ -49,7 +50,8 @@ const Filter: React.FC<FilterProps> = ({
       { skipNull: true }
     );
 
-    router.replace(url);
+    // Utiliza el método push en lugar de replace para mantener el historial
+    router.push(url);
   };
 
   return (

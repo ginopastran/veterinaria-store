@@ -38,10 +38,6 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(
     null
   );
-  const [selectedMobileSubcategory, setSelectedMobileSubcategory] = useState<
-    string | null
-  >(null);
-
   const productsPerPage = 8;
   const mobileProductsPerPage = 6;
 
