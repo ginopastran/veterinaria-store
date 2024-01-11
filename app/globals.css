@@ -1,9 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('../fonts/style.css');
-
-
+@import url("../fonts/style.css");
 
 * {
   z-index: 0;

@@ -64,7 +64,6 @@ const Billboard = () => {
                 </Link>
               </div>
             </div>
-
             <img
               className="object-cover object-center rounded absolute bottom-0 z-20 max-w-[40%] right-0 hidden md:block"
               alt="hero"
