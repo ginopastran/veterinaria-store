@@ -21,24 +21,15 @@ const Filter: React.FC<FilterProps> = ({
   data,
   name,
   valueKey,
-  selectedValue,
   setSelectedValue,
   disabled,
 }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  useEffect(() => {
-    window.scrollTo(0, scrollPosition);
-  }, [selectedValue, scrollPosition]);
+  const selectedValue = searchParams.get(valueKey);
 
   const onClick = (id: string) => {
-    setSelectedValue(id === selectedValue ? null : id);
-
-    // Almacena la posición de desplazamiento actual
-    setScrollPosition(window.scrollY);
-
     const current = qs.parse(searchParams.toString());
 
     const query = {
@@ -58,7 +49,7 @@ const Filter: React.FC<FilterProps> = ({
       { skipNull: true }
     );
 
-    router.replace(url);
+    router.push(url);
   };
 
   return (

@@ -113,14 +113,6 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
         <ProductsHero />
         <div className="hidden md:flex mx-6 gap-16 items-end" id="products">
           <Filter
-            name="Categorías"
-            valueKey="categoryId"
-            data={categories}
-            selectedValue={selectedCategory}
-            setSelectedValue={setSelectedCategory}
-            disabled={categories.length === 1}
-          />
-          <Filter
             name="Subcategorías"
             valueKey="subcategoryId"
             data={subcategories}
@@ -167,14 +159,6 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
                     width={200}
                   />
                   <div className="flex flex-col gap-3">
-                    <Filter
-                      name="Categorías"
-                      valueKey="categoryId"
-                      data={categories}
-                      selectedValue={selectedCategory}
-                      setSelectedValue={setSelectedCategory}
-                      disabled={categories.length === 1}
-                    />
                     <Filter
                       name="Subcategorías"
                       valueKey="subcategoryId"

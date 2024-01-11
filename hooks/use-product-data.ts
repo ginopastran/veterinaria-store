@@ -19,16 +19,12 @@ const useProductsData = (storeId: string, searchParams: SearchParams) => {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                const scrollPosition = window.scrollY;
-
                 const productsData = await getProducts({
                     storeId,
                     categoryId: searchParams.categoryId,
                     subcategoryId: searchParams.subcategoryId,
                 });
                 setProducts(productsData);
-                window.scrollTo(0, scrollPosition);
-
                 const categoriesData = await getCategories({ storeId });
                 setCategories(categoriesData);
 
