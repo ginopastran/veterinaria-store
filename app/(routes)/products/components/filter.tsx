@@ -49,7 +49,7 @@ const Filter: React.FC<FilterProps> = ({
       { skipNull: true }
     );
 
-    router.push(url);
+    router.replace(url);
   };
 
   return (
