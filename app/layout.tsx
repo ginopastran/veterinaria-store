@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 import "./globals.css";
+import MobileCart from "@/components/mobile-cart";
 
 const font = Inter({ subsets: ["latin"] });
 

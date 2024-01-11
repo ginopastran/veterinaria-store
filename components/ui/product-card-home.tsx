@@ -21,7 +21,8 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/product/${data?.id}`);
+    // router.push(`/product/${data?.id}`);
+    previewModal.onOpen(data);
   };
 
   const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
@@ -46,9 +47,9 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
         <img
           src={data.images?.[0]?.url}
           alt=""
-          className="aspect-square object-cover rounded-md"
+          className="object-cover mx-auto rounded-md"
         />
-        <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
+        <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5 hidden">
           <div className="flex gap-x-6 justify-center">
             <IconButton
               onClick={onPreview}

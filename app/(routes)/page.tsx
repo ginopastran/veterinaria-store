@@ -7,6 +7,7 @@ import Carrusel from "@/components/ui/carrusel";
 import CardHome from "@/components/card-home";
 import UbicacionHome from "@/components/ubicacion";
 import Image from "next/image";
+import MobileCart from "@/components/mobile-cart";
 
 export const revalidate = 0;
 
@@ -16,6 +17,9 @@ const HomePage = async () => {
   return (
     <Container>
       <Billboard />
+      <div className="fixed bottom-0 right-0 z-[100] block sm:hidden p-4">
+        <MobileCart />
+      </div>
       <div className="space-y-10 ">
         <div className="flex relative flex-col gap-y-8 px-4 sm:px-6 lg:px-8">
           <img

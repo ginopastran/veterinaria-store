@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { ClipLoader } from "react-spinners";
 import useProductsData from "@/hooks/use-product-data";
+import MobileCart from "@/components/mobile-cart";
 
 interface ProductsPageProps {
   searchParams: {
@@ -103,6 +104,9 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ searchParams }) => {
 
   return (
     <Container>
+      <div className="fixed bottom-0 right-0 z-[50] block sm:hidden p-4">
+        <MobileCart />
+      </div>
       <div className="space-y-10 pb-10">
         <ProductsHero />
         <div className="hidden md:flex mx-6 gap-16 items-end" id="products">

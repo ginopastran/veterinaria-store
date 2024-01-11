@@ -21,7 +21,8 @@ const ProductCardSlider: React.FC<ProductCardSlider> = ({ data }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/product/${data?.id}`);
+    // router.push(`/product/${data?.id}`);
+    previewModal.onOpen(data);
   };
 
   const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
